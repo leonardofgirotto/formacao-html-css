@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Form</title>
+</head>
+<body>
+    <h1>Teste de Formulário</h1>
+
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iusu">Usuário: </label>
+            <input type="text" name="iusu" id="iusu" required minlength="4" size="20" placeholder="Nome do Usuário" autocomplete="username"> <!-- o atributo required deixa o preenchimento do campo como obrigatório, e só permite o envio após o preenchimento. -->
+            <!-- minlength="4" define a quantidade minima de caracteres -->
+            <!-- size mostra a quantid\de de caracteres que serão exibidos dentro da caixa -->
+            <!-- placeholder é texto de dica que fica dentro das caixas -->
+            <!-- autocomplete especifica de que tipo de info é o campo, para autocompletar -->
+        </p>
+        <p>
+            <label for="iusu">Senha: </label>
+            <input type="password" name="isen" id="isen" required minlength="8" autocomplete="new-password"> 
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar"> <!-- cria um botão que limpa os campos -->
+        </p>
+    </form>
+</body>
+</html>
