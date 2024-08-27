@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>
+    <form action="cadastro.php" method="post" autocomplete="on">
+        <p>
+            <label for="iest">Estado:</label>
+            <select name="estado" id="iest">
+                <!-- o elemento "select" cria uma caixa de selação -->
+                <option value="" selected>--- Escolha ---</option>
+                <!-- selected mantem um option selecionado como padrão na caixa de selação -->
+                <optgroup label="Região Sudeste">
+                    <!-- optgroup cria titulos dentro da caixa de seleção -->
+                    <option value="MG">Minas Gerais</option>
+                    <!-- option cria as opções dentro da caixa de seleção -->
+                    <option value="SP">São Paulo</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                </optgroup>
+                <optgroup label="Região Nordeste">
+                    <option value="MA">Maranhão</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="iprof">Profissão:</label>
+            <input type="text" name="iprof" id="iprof" list="lstprof"> <!-- para funcionar devemos passar o atributo list -->
+            <!-- O datalist nos permite criar uma lista de selação e permite ao usuário digitar caso não tenha a opção desejada -->
+            <datalist id="lstprof">
+                <!-- se tirar o "value" aparece apenas o nome adicionado -->
+                <option>Administrador</option>
+                <option value="ADV">Advogado</option>
+                <option value="CONT">Contador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PROF">Professor</option>
+            </datalist>
+            <p>
+                <label for="imsg">Mensagem:</label> <br>
+                <textarea name="imsg" id="imsg" cols="30" rows="10" placeholder="Digite sua mensagem aqui..."></textarea>
+                <!-- cria uma caixa de mensagem -->
+            </p>
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>
